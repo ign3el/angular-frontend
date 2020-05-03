@@ -11,6 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 
 const routes: Routes = [
   { path: 'category/:id/:name', component: ProductListComponent },
@@ -23,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, MenuComponent, SearchComponent, ProductDetailsComponent],
+  declarations: [AppComponent, ProductListComponent, MenuComponent, SearchComponent, ProductDetailsComponent, CartStatusComponent],
   imports: [BrowserModule, HttpClientModule, NgbModule,RouterModule.forRoot(routes)],
   providers: [ProductService],
   bootstrap: [AppComponent],
