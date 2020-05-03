@@ -1,0 +1,19 @@
+<div class="detail-section">
+    <div class="container-fluid" *ngIf="!isNullProduct">
+        <img src="{{ product.imageUrl}}" class="detail-img">
+        <h3>{{ product.name}}</h3>
+        <div class="price">
+            {{product.unitPrice|currency:"USD"}}
+        </div>
+        <a href="#" class="primary-btn">ADD TO CART</a>
+        <hr>
+        <h4>Description</h4>
+        <p>{{product.description}}</p><br>
+        <a routerLink="/products">Back to Product Listings</a>
+    </div>
+    <div *ngIf="isNullProduct" class="alert alert-warning col-md-12" role="alert">
+        No Products Found
+    </div>
+</div>
+ 
+  
