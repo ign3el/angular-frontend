@@ -21,7 +21,7 @@ export class CartService {
 
       //find item in cart based on id
       for(let tempCartItem of this.cartItems) {
-        if(tempCartItem.id=cartItem.id) {
+        if(tempCartItem.id===cartItem.id) {
           existingcartItem = tempCartItem;
           break;
         }
